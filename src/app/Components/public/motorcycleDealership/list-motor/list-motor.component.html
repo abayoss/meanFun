@@ -1,0 +1,35 @@
+<div class="uk-child-width-expand@s uk-margin-large-top uk-grid" uk-grid="">
+  <div *ngFor="let item of fakeMotors">
+    <div class="uk-card uk-card-hover uk-card-default ">
+        <div class="uk-card-media-top">
+            <img src="{{item.image}}" alt="">
+        </div>
+      <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+          <div class="uk-width-auto uk-card-title">
+            <b>{{ item.model }}</b>
+          </div>
+        </div>
+      </div>
+      <div class="uk-card-body">
+        <p>
+          {{ item.details }}
+        </p>
+        <h4><b>TECHNICAL DETAILS</b></h4>
+        <div>
+          <p><b>DISPLACEMENT :</b> {{ item.technicalDetails.DISPLACEMENT }}</p>
+          <p><b>POWERINHP :</b> {{ item.technicalDetails.POWERINHP }}</p>
+          <p><b>POWERINKW :</b> {{ item.technicalDetails.POWERINKW }}</p>
+          <p><b>TORQUE :</b> {{ item.technicalDetails.TORQUE }}</p>
+          <p><b>DESIGN :</b> {{ item.technicalDetails.DESIGN }}</p>
+          <p><b>STROKE :</b> {{ item.technicalDetails.STROKE }}</p>
+        </div>
+      </div>
+      <!-- <div class="uk-card-footer">
+        <a routerLink="{{ item.link }}" class="uk-button uk-button-text"
+          >Check demo App</a
+        >
+      </div> -->
+    </div>
+  </div>
+</div>

@@ -12,7 +12,7 @@ export class LandingComponent implements OnInit {
       icon: 'refresh',
       body: `interactions with the API,
         to get and modify the public state`,
-      link: 'public',
+      link: 'motor',
       bullets: [
         'http Client',
         'Template driven Forms',
@@ -24,7 +24,7 @@ export class LandingComponent implements OnInit {
       icon: 'lock',
       body: `interactions with the API,
         to get and modify the Private state`,
-      link: 'private',
+      link: 'login',
       bullets: [
         'Json Web Token',
         'Guards',
