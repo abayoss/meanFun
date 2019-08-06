@@ -1,0 +1,31 @@
+<div
+  class="uk-container"
+  uk-height-viewport=""
+  style="min-height: calc(100vh);"
+>
+  <div class="uk-child-width-expand@s uk-margin-large-top uk-grid" uk-grid="">
+    <div *ngFor="let item of landing">
+      <div class="uk-card uk-card-hover uk-card-default ">
+        <div class="uk-card-header">
+          <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto uk-card-title">
+              {{ item.title }}
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <p>
+            {{item.body}}
+          </p>
+          <h5>Using :</h5>
+          <div *ngFor="let bullet of item.bullets">
+              <p> o {{bullet}}</p>
+          </div>
+        </div>
+        <div class="uk-card-footer">
+          <a routerLink="{{item.link}}" class="uk-button uk-button-text">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
