@@ -3,13 +3,13 @@
   class="uk-button uk-button-danger  uk-width-1-1 uk-button-small"
 >
   <a uk-icon="icon: plus"></a>
-  Add Motor
+  Add base
 </a>
 <div
   class="uk-child-width-expand@s uk-margin-small-top uk-grid uk-grid-match"
   uk-grid
 >
-  <div *ngFor="let item of motors" class="uk-width-1-3">
+  <div *ngFor="let item of bases" class="uk-width-1-3">
     <div class="uk-card uk-card-hover uk-card-default ">
       <div class="uk-card-media-top">
         <a routerLink="show/{{ item._id }}">
@@ -19,12 +19,12 @@
       <div class="uk-card-header">
         <div class="uk-grid-small uk-flex-middle" uk-grid>
           <div class="uk-width-auto uk-card-title">
-            <b>{{ item.model }}</b>
+            <b>{{ item.name }}</b>
           </div>
         </div>
       </div>
       <div class="uk-card-body">
-        <p>{{ item.details | slice: 0:180 }}...</p>
+        <p>{{ item.background | slice: 0:180 }}...</p>
       </div>
       <div class="uk-card-footer">
         <a

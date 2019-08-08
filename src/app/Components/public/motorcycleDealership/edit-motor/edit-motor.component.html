@@ -1,3 +1,129 @@
-<p>
-  edit-motor works!
-</p>
+<div *ngIf="motor" class="uk-margin-bottom">
+  <a
+    routerLink="../../"
+    class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom uk-button-small"
+  >
+    <a uk-icon="icon: arrow-left"></a>
+    go back
+  </a>
+  <div class="uk-child-width-expand@s uk-margin-small-top uk-grid" uk-grid="">
+    <div>
+      <div class="uk-card uk-card-hover uk-card-default ">
+        <div class="uk-card-media-top">
+          <img src="{{ motor.image }}" class="uk-width-1-1" alt="" />
+        </div>
+        <form action="" (ngSubmit)="onEdit(f)" #f="ngForm">
+          <div class="uk-card-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <div class="uk-width-auto uk-card-title">
+                <b>Model</b>
+                <div class="uk-margin">
+                  <input
+                    name="Model"
+                    [ngModel]="motor.model"
+                    class="uk-input"
+                    type="text"
+                    placeholder="Input"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <div class="uk-margin">
+              <h4>
+                <b>Details</b>
+              </h4>
+              <textarea
+                [ngModel]="motor.details"
+                name="Details"
+                id="details"
+                cols="30"
+                rows="10"
+                class="uk-textarea"
+                rows="5"
+              ></textarea>
+            </div>
+            <h4><b>TECHNICAL DETAILS</b></h4>
+            <div>
+              <b>DISPLACEMENT :</b>
+              <div class="uk-margin">
+                <input
+                  name="DISPLACEMENT"
+                  [ngModel]="motor.technicalDetails.DISPLACEMENT"
+                  class="uk-input"
+                  type="text"
+                  placeholder="Input"
+                  value="{{ motor.technicalDetails.DISPLACEMENT }}"
+                />
+              </div>
+
+              <b>POWERINHP :</b>
+              <div class="uk-margin">
+                <input
+                  name="POWERINHP"
+                  [ngModel]="motor.technicalDetails.POWERINHP"
+                  class="uk-input"
+                  type="text"
+                  placeholder="Input"
+                  value="{{ motor.technicalDetails.POWERINHP }}"
+                />
+              </div>
+              <b>POWERINKW :</b>
+              <div class="uk-margin">
+                <input
+                  name="POWERINKW"
+                  [ngModel]="motor.technicalDetails.POWERINKW"
+                  class="uk-input"
+                  type="text"
+                  placeholder="Input"
+                  value="{{ motor.technicalDetails.POWERINKW }}"
+                />
+              </div>
+              <b>TORQUE :</b>
+              <div class="uk-margin">
+                <input
+                  name="TORQUE"
+                  [ngModel]="motor.technicalDetails.TORQUE"
+                  class="uk-input"
+                  type="text"
+                  placeholder="Input"
+                  value="{{ motor.technicalDetails.TORQUE }}"
+                />
+              </div>
+              <b>DESIGN :</b>
+              <div class="uk-margin">
+                <input
+                  name="DESIGN"
+                  [ngModel]="motor.technicalDetails.DESIGN"
+                  class="uk-input"
+                  type="text"
+                  placeholder="Input"
+                  value="{{ motor.technicalDetails.DESIGN }}"
+                />
+              </div>
+              <b>STROKE :</b>
+              <div class="uk-margin">
+                <input
+                  name="STROKE"
+                  [ngModel]="motor.technicalDetails.STROKE"
+                  class="uk-input"
+                  type="text"
+                  placeholder="Input"
+                  value="{{ motor.technicalDetails.STROKE }}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="uk-card-footer">
+            <button
+              class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom"
+            >
+              Submit Changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

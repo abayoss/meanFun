@@ -1,0 +1,74 @@
+<div class="uk-margin-bottom">
+  <a
+    routerLink="../"
+    class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom uk-button-small"
+  >
+    <a uk-icon="icon: arrow-left"></a>
+    go back</a
+  >
+  <div class="uk-child-width-expand@s uk-margin-small-top uk-grid" uk-grid="">
+    <div>
+      <div class="uk-card uk-card-hover uk-card-default ">
+        <div class="uk-card-media-top">
+          <img src="{{ previewimage }}" class="uk-width-1-1" alt="" />
+        </div>
+        <form action="" (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div class="uk-card-body">
+            <div class="uk-margin">
+              <b>Image Url : </b>
+              <input
+                name="image"
+                [(ngModel)]="previewimage"
+                ngModel
+                class="uk-input"
+                type="text"
+                placeholder="Input"
+              />
+              <small>Hint : copy any image link and past it here</small>
+            </div>
+            <div class="uk-margin">
+              <b>Name</b>
+              <input
+                name="name"
+                ngModel
+                class="uk-input"
+                type="text"
+                placeholder="Input"
+              />
+            </div>
+            <div class="uk-margin">
+              <b>Location</b>
+              <input
+                name="location"
+                ngModel
+                class="uk-input"
+                type="text"
+                placeholder="Input"
+              />
+            </div>
+            <div class="uk-margin">
+              <h4>
+                <b>Background</b>
+              </h4>
+              <textarea
+                ngModel
+                name="background"
+                cols="30"
+                rows="10"
+                class="uk-textarea"
+                rows="5"
+              ></textarea>
+            </div>
+          </div>
+          <div class="uk-card-footer">
+            <button
+              class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom"
+            >
+              Submit Changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

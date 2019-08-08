@@ -1,8 +1,8 @@
-<div *ngIf="motor">
-    <a
+<div *ngIf="base">
+  <a
     routerLink="../../"
     class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom uk-button-small"
-    >
+  >
     <a uk-icon="icon: arrow-left"></a>
     go back</a
   >
@@ -12,38 +12,28 @@
       <div class="uk-card uk-card-hover uk-card-default ">
         <div class="uk-card-media-top">
           <div>
-            <img src="{{ motor.image }}" class="uk-width-1-1" alt="" />
+            <img src="{{ base.image }}" class="uk-width-1-1" alt="" />
           </div>
         </div>
         <div class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle" uk-grid>
             <div class="uk-width-auto uk-card-title">
-              <b>{{ motor.model }}</b>
+              <b>{{ base.name }}</b>
             </div>
           </div>
         </div>
-        
+
         <div class="uk-card-body">
+          <b>{{ base.location }}</b>
           <p>
-            {{ motor.details }}
+            {{ base.background }}
           </p>
-          <h4><b>TECHNICAL DETAILS</b></h4>
-          <div>
-            <p>
-              <b>DISPLACEMENT :</b> {{ motor.technicalDetails.DISPLACEMENT }}
-            </p>
-            <p><b>POWERINHP :</b> {{ motor.technicalDetails.POWERINHP }}</p>
-            <p><b>POWERINKW :</b> {{ motor.technicalDetails.POWERINKW }}</p>
-            <p><b>TORQUE :</b> {{ motor.technicalDetails.TORQUE }}</p>
-            <p><b>DESIGN :</b> {{ motor.technicalDetails.DESIGN }}</p>
-            <p><b>STROKE :</b> {{ motor.technicalDetails.STROKE }}</p>
-          </div>
         </div>
         <div class="uk-card-footer">
           <a
-            routerLink="../../edit/{{ motor._id }}"
+            routerLink="../../edit/{{ base._id }}"
             class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom uk-button-small"
-            >
+          >
             <a uk-icon="icon: pencil"></a>
             Edit</a
           >

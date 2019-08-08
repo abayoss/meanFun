@@ -1,7 +1,4 @@
-<div
-  uk-height-viewport=""
-  style="min-height: calc(100vh);"
->
+<div uk-height-viewport="" style="min-height: calc(100vh);">
   <div class="uk-child-width-expand@s uk-margin-large-top uk-grid" uk-grid="">
     <div *ngFor="let item of landing">
       <div class="uk-card uk-card-hover uk-card-default ">
@@ -14,15 +11,19 @@
         </div>
         <div class="uk-card-body">
           <p>
-            {{item.body}}
+            {{ item.body }}
           </p>
           <h5>Using :</h5>
           <div *ngFor="let bullet of item.bullets">
-              <p> o {{bullet}}</p>
+            <p>o {{ bullet }}</p>
           </div>
         </div>
         <div class="uk-card-footer">
-          <a routerLink="{{item.link}}" class="uk-button uk-button-text">Check demo App</a>
+          <a
+            routerLink="{{ item.link }}"
+            class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom uk-button-small"
+            >Check demo App</a
+          >
         </div>
       </div>
     </div>

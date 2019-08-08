@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Motor } from '../motor';
-import { FakeMotorService } from '../fake-motor.service';
+import { MotorService } from '../motor.service';
 
 @Component({
   selector: 'app-list-motor',
@@ -8,13 +8,16 @@ import { FakeMotorService } from '../fake-motor.service';
   styleUrls: ['./list-motor.component.scss']
 })
 export class ListMotorComponent implements OnInit {
+  motors: Motor[];
+  constructor(private ms: MotorService) {}
 
-  constructor(private fms: FakeMotorService) {}
-  fakeMotors: Motor[];
-  fakeMode = false;
   ngOnInit() {
-    if (!this.fakeMode) {
-      this.fakeMotors = this.fms.getFakeMotors();
-    }
+    this.polulateMotors();
+  }
+
+  polulateMotors() {
+    this.ms.getMotors().subscribe((motors: Motor[]) => {
+      this.motors = motors;
+    });
   }
 }

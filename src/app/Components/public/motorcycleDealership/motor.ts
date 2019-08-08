@@ -1,5 +1,5 @@
 export interface Motor {
-  id?: string;
+  _id?: string;
   model: string;
   type?: string;
   image?: string;

@@ -14,9 +14,9 @@ export class LandingComponent implements OnInit {
         to get and modify the public state`,
       link: 'motor',
       bullets: [
-        'http Client',
         'Template driven Forms',
-        'Reactive Forms'
+        'Services',
+        'HTTP Client'
       ]
     },
     {
