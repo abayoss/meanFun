@@ -43,7 +43,6 @@ exports.userLogin = (req, res, next) => {
           message: 'Auth failed'
         });
       }
-      console.log(": exports.userLogin -> process.env.JWT_KEY", process.env.JWT_KEY)
       const token = jwt.sign(
         { email: fetchedUser.email, userId: fetchedUser._id },
         process.env.JWT_KEY,
