@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./show-base.component.scss']
 })
 export class ShowBaseComponent implements OnInit {
-
   base: Base;
 
   constructor(private ms: MilitaryService, private route: ActivatedRoute) {}
@@ -23,5 +22,4 @@ export class ShowBaseComponent implements OnInit {
       this.base = base;
     });
   }
-
 }

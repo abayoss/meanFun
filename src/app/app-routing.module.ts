@@ -11,6 +11,7 @@ import { ListBaseComponent } from './Components/private/militaryBases/list-base/
 import { AddBaseComponent } from './Components/private/militaryBases/add-base/add-base.component';
 import { ShowBaseComponent } from './Components/private/militaryBases/show-base/show-base.component';
 import { EditBaseComponent } from './Components/private/militaryBases/edit-base/edit-base.component';
+import { AuthGuard } from './Components/private/auth/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -18,16 +19,32 @@ const routes: Routes = [
   { path: 'motor/add', component: AddMotorComponent },
   { path: 'motor/show/:id', component: ShowMotorComponent },
   { path: 'motor/edit/:id', component: EditMotorComponent },
-  { path: 'base', component: ListBaseComponent },
-  { path: 'base/add', component: AddBaseComponent },
-  { path: 'base/show/:id', component: ShowBaseComponent },
-  { path: 'base/edit/:id', component: EditBaseComponent },
+  { path: 'base', component: ListBaseComponent, canActivate: [AuthGuard] },
+  { path: 'base/add', component: AddBaseComponent, canActivate: [AuthGuard] },
+  {
+    path: 'base/show/:id',
+    component: ShowBaseComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'base/edit/:id',
+    component: EditBaseComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./Components/private/auth/auth.module').then(
+        mod => mod.AuthModule
+      )
+  },
+
   { path: '**', component: PageNotFoundComponent }
 ];
 
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule {}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ export class MilitaryService {
     return this.http.post(environment.ROOT_URL + '/private/bases', newbase);
   }
   getBases() {
-    return this.http.get(environment.ROOT_URL + '/private/bases');
+    const headers = new HttpHeaders().set('Authorization', 'barrer auth-token');
+    return this.http.get(environment.ROOT_URL + '/private/bases', {headers});
   }
   getBase(id) {
     return this.http.get(environment.ROOT_URL + '/private/bases/' + id);

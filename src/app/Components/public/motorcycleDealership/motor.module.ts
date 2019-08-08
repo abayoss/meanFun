@@ -17,7 +17,7 @@ import { AddMotorComponent } from './add-motor/add-motor.component';
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   declarations: [
     ListMotorComponent,

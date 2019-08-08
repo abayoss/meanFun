@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './Layout/page-not-found/page-not-found.co
 import { LandingComponent } from './Layout/landing/Landing.component';
 import { MotorModule } from './Components/public/motorcycleDealership/motor.module';
 import { MilitaryModule } from './Components/private/militaryBases/military.module';
+import { AuthModule } from './Components/private/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { MilitaryModule } from './Components/private/militaryBases/military.modu
     PageNotFoundComponent,
     LandingComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, MotorModule, MilitaryModule],
+  imports: [BrowserModule, AppRoutingModule, MotorModule, MilitaryModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent]
 })

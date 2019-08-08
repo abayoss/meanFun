@@ -20,7 +20,6 @@ export class ShowMotorComponent implements OnInit {
     const id = this.route.snapshot.params['id'];
     this.ms.getMotor(id).subscribe((motor: Motor) => {
       this.motor = motor;
-      console.log(': ShowMotorComponent -> populateMotor -> motor', motor);
     });
   }
 }

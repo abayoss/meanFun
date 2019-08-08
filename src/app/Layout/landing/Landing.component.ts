@@ -24,7 +24,7 @@ export class LandingComponent implements OnInit {
       icon: 'lock',
       body: `interactions with the API,
         to get and modify the Private state`,
-      link: 'login',
+      link: 'base',
       bullets: [
         'Json Web Token',
         'Guards',

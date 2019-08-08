@@ -1,0 +1,60 @@
+<!-- <mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
+    <mat-form-field>
+      <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
+      <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required>
+      <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit" *ngIf="!isLoading">Signup</button>
+  </form>
+</mat-card> -->
+
+<form
+  class="uk-width-1-3 uk-margin-auto"
+  (submit)="onSignup(signupForm)" #signupForm="ngForm"
+  *ngIf="!isLoading"
+>
+  <div class="uk-margin">
+    <label for="email">Email</label>
+    <input
+      class="uk-input"
+      type="email"
+      name="email"
+      ngModel
+      type="email"
+      placeholder="E-Mail"
+      #emailInput="ngModel"
+      required
+      email
+      required
+    />
+  </div>
+  <div class="uk-margin">
+    <label for="password">Password</label>
+    <input
+      class="uk-input"
+      type="password"
+      name="password"
+      ngModel
+      matInput
+      placeholder="Password"
+      #passwordInput="ngModel"
+      required
+    />
+  </div>
+  <button
+    class="uk-button uk-button-primary uk-button-small uk-width-1-1"
+    type="submit"
+  >
+    <span uk-icon="icon: lock"></span>
+    signup
+  </button>
+  <hr />
+  <a class="uk-button uk-button-text" routerLink="../login"
+    >Login if you have an account</a
+  >
+</form>
