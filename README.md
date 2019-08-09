@@ -4,7 +4,7 @@ Mean Stack app that shows you how to do basic interaction, and authentication, u
 
 Has two parts : 
 
-![Imgur](https://i.imgur.com/0gPlXWm.png)
+![Imgur](https://i.imgur.com/DM8zLCF.png)
 
 ## Development server
 
@@ -19,12 +19,12 @@ Run `node app.js`. Navigate to `http://localhost:3000/`. if you want The app to 
 ## Use Cases : 
 
 ### Public resources : 
-recources that every body has access to :
+Recourses that every body has access to :
 
 ![Imgur](https://i.imgur.com/4YiTYda.png)
 
 ### Private resources : 
-recources that only authenticated users has access to :
+Recourses that only authenticated users has access to :
 
 ![Imgur](https://i.imgur.com/myEuXmj.png)
 
