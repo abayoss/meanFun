@@ -1,7 +1,8 @@
 # MeanFun
 
-Mean Stack app that shows you how to do basic interaction, and authentiaction, using the Http Client.
-splited on two parts : 
+Mean Stack app that shows you how to do basic interaction, and authentication, using the Http Client.
+
+Has two parts : 
 
 ![Imgur](https://i.imgur.com/0gPlXWm.png)
 
